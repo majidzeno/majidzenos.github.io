@@ -1,0 +1,337 @@
+body{
+	background-color:$gray;
+}
+.underconstruction{
+	text-align: center;
+	font-weight: bold;
+}
+.navbar{
+	background-color:$blue;
+    padding: 0px 10px;
+    height: 42px;
+	@include clearfix;
+	&__left{
+	    float: left;
+	    background-color: $blue;
+	    width: 45%;
+	    padding: 0 35px;
+		@include clearfix;
+	}
+	&__logo{
+		font-size: 28px;
+		float: left;
+		.fa{
+			color:white;
+		}
+	}
+	&__search{
+	    float: right;
+	    width: 92%;
+	    margin-top: 9px;
+	    margin-bottom: 0;
+	    border-radius: 4px;
+		input{
+		    margin: 0;
+		    height: 25px;
+		    border-radius: 4px;
+		    background-color:white;
+		}
+		@mixin placeholder {
+			::-webkit-input-placeholder {@content}
+			:-moz-placeholder           {@content}
+			::-moz-placeholder          {@content}
+			:-ms-input-placeholder      {@content}  
+		}
+		@include placeholder {
+			color: black;
+		}
+
+	}
+	&__right{
+		float: right;
+		width:45%;
+		@include clearfix;
+	}
+	&__list{
+		@include clearfix;
+		list-style:none;
+		margin:0;
+		padding-top: 10px;
+		float: left;
+		li{
+			float: left;
+			color:white;
+			padding-left:10px;
+			font-size: 12px;
+			font-weight:bold;
+		}
+		.navName{
+			border-right:1px solid rgba(10, 10, 10, 0.18);
+			padding-right:10px;
+		}
+	}
+	&__icons{
+	    list-style: none;
+		background-color:$blue;
+		margin: 0;
+		padding: 0;
+		margin-top: 2px;
+		float: left;
+		padding-left: 10px;
+		@include clearfix;
+		margin-top: 7px;
+		margin-left: 24px;
+	}
+	.icon{
+		float: left;
+		max-height: 33px;
+		&__1{
+			img{
+			    width: 35px;
+			}
+		}
+		&__2{
+			img{
+				width: 30px;
+			    margin-top: -3px;
+			    margin-right: 8px;
+			}
+		}
+		&__3{
+		    width: 48px;
+		    HEIGHT: 23PX;
+		    margin-top: -2px;
+		    margin-right: 25px;
+		    border-right: 1PX SOLID rgba(24, 36, 61, 0.4);
+		    PADDING-RIGHT: 22PX;	
+		}
+		&__4{
+		    width: 37px;
+		    margin-top: -2px;
+		}
+	}
+	&__mobile{
+		list-style:none;
+		background-color:red;
+		@include clearfix;
+		width:100%;
+		height: 100%;
+		margin:0;
+		overflow: hidden;
+		background-color:$blue;
+		a{
+			float: left;
+			max-width: 16%;
+		}
+	}
+	#msg-mobile{
+		margin-top: -3px;
+	}
+	#notifications-mobile{
+		margin-top: -3px;
+		padding: 2px;
+	}
+	#search-mobile{
+		padding: 6px;
+		margin-top: -6px;
+	}
+	#menu-mobile{
+		float: right;
+		li{
+			margin-top: -7px;
+			padding: 7px;
+		}
+	}
+	@include breakpoint (medium down){
+		padding:0;
+		height: 55px;
+	}
+}
+.coverCont{
+    border: 1px solid $gray;
+    background-color: white;
+    border-top: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    text-align:center;
+}
+.profile{
+	position: relative;
+	&__picture{
+		padding-top: 15%;
+		border: 2px solid black;
+		background-repeat: no-repeat;
+		background-position: lef;
+		position: absolute;
+		left: 2%;
+		top: -160px;
+		width: 17%;
+		padding-left: 0;
+		background-size: cover;
+	}
+	&__name{
+		position: absolute;
+		left: 20%;
+		top: 80%;
+		font-size: 25px;
+		margin-top: -46px;
+	}
+}
+.taskBar{
+	list-style: none;
+	@include clearfix;
+	a{
+		float: left;
+		border: 1px solid #e9eaed;
+	    padding: 15px 30px;
+		font-size: 16px;
+		font-weight: bold;
+		color: #365899!important;
+		[aria-selected='true']{
+			background-color:white!important;
+			color:#0c3d5d !important;
+		}
+		&:focus{
+			background-color:white!important;
+			color:#0c3d5d !important;
+		}
+		&[aria-selected='true']{
+			background-color:white!important;
+			color:#0c3d5d !important;
+		}
+	}
+}
+.taskBar.tabs{
+	border:none;
+}
+.tabs-content{
+	border:none;
+}
+.tabs-panel{
+	padding:0;
+}
+// Arrow Up just make the parent position relative
+// .tabs-title{
+// 	&:after{
+// 		content: '';
+// 		position: absolute;
+// 		width: 0;
+// 		top: 50%;
+// 		left: 100%;
+// 		height: 0;
+// 		border-top: 20px solid transparent;
+// 		border-bottom: 20px solid transparent;
+// 		border-left: 20px solid #ebebeb;
+// 	}
+// }
+.tab_content{
+	border: 10px solid $gray;
+    background-color: white;
+    text-align: left;
+    font-size: 13px;
+	border-left: none;
+	.fa-globe{
+		border: 6px solid $blue;
+		border-radius: 50%;
+		color: white;
+		background-color: $blue;
+		width: 30px;
+		height: 31px;
+		margin-right: 10px;
+	}
+    h5{
+	    padding-top: 15px;
+	}
+}
+#first_empty{
+}
+#last_empty{
+}
+#first_link{
+	color:white!important;
+	padding:15px 105px;
+}
+#last_link{
+	color:white!important;
+	padding:15px 129.5px;
+}
+.intro{
+	list-style: none;
+	margin-left:0;
+	.fa{
+		color:$icon_gray;
+		margin-right:10px;
+	}
+	a{
+		color:$blue;
+	}
+}
+.content{
+	&_right{
+		border-right:none;
+		border-bottom:none;
+		border-left:10px solid $gray;
+
+	}
+	&_left{
+		border-left:none;
+		border-right:none;
+		border-bottom:none;
+	}
+}
+.position{
+	padding-top:25px;
+	&:last-child{
+		padding-bottom:35px;
+	}
+	&__logo{
+		padding-top: 5%;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+		border: 15px solid white;
+	}
+	&__title{
+	    font-size: 16px;
+	    font-weight: bold;
+	    color: #0c3d5d;
+	}
+	&__company{
+		font-size: 14px;
+		display: inline-block;
+	}
+}
+.almakinah{
+	padding-top:18%;
+}
+.riseUp{
+	padding-top:18%;
+}
+.education{
+	overflow: hidden;
+	.almakinah{
+		padding-top:15%;
+	}
+	.position{
+		&__container{
+			text-align: left;
+			padding-right: 50px;
+		}
+		&__title{
+			font-size: 18px;
+		}
+		&__company{
+			font-size: 16px;
+		}
+		&__period{
+			font-size:14px;
+		}
+		&__location{
+			font-size:14px;
+		}
+		&__description{
+			font-size:14px;
+		}
+	}
+}
