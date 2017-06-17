@@ -335,8 +335,20 @@ body{
 		}
 	}
 }
-.social{
-	.fa{
-		font-size:50px;
+.social.fa{
+	font-size:50px;
+	margin:50px 18px 50px 18px;  
+}
+.letter.fa{
+	margin:0;
+}
+#panel2{
+	h2{
+		font-weight: bold;
+		letter-spacing: 10px;
+		margin: 50px;
 	}
+}
+.pen{
+	max-width:50%;
 }
