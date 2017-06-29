@@ -18,10 +18,16 @@ body{
 		@include clearfix;
 	}
 	&__logo{
-		font-size: 28px;
+		// font-size: 28px;
+
 		float: left;
-		.fa{
-			color:white;
+		// .fa{
+		// 	color:white;
+		// }
+		a{
+			img{
+				width: 35px;
+			}
 		}
 	}
 	&__search{
