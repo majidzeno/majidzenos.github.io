@@ -56,3 +56,9 @@ $(document).foundation();
 //         document.body.appendChild(css);
 //     };
 
+ // function gettingJSON(){
+ //        document.write("jquery loaded");
+ //        $.getJSON("http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID=1b2674ea63cdfa64f265f054bcad8bf4",function(json){
+ //            document.write(JSON.stringify(json));
+ //        });
+ //    }
