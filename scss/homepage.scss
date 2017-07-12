@@ -369,3 +369,35 @@ body{
 	#embed-nav {
 		background-color:red ;
 	}
+
+#panel4{
+	a{border: 1px solid;
+    border-radius: 50%;
+    padding-bottom: 31px;
+    padding-top: 50px;
+    padding-left: 15px;
+    // background-color: black;
+    padding-right: 15px;
+    &:hover{
+    	background-color:black;
+    	.fa{
+		color:white;
+	}
+    }
+	}
+	
+	// .out-link{
+	//     padding-bottom: 10px;
+	//     padding-top: 37px;
+
+	// }
+	.fa-instagram{
+		margin: 14px;
+	}
+	.fa-twitter{
+		margin: 14px;
+	}
+	.fa-linkedin{
+		margin:15px;
+	}
+}
