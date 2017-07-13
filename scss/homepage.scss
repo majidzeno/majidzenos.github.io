@@ -186,6 +186,11 @@ body{
 		margin-top: -46px;
 	}
 }
+.T{
+	a{
+		letter-spacing: 3px;
+	}
+}
 .taskBar{
 	list-style: none;
 	@include clearfix;
@@ -262,7 +267,7 @@ body{
 }
 #last_link{
 	color:white!important;
-	padding:15px 202.2px;
+	padding:15px 190px;
 }
 .intro{
 	list-style: none;
@@ -360,6 +365,7 @@ body{
 		font-size: 54px;
 
 	}
+
 }
 .pen{
 	// max-width:50%;
