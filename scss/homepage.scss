@@ -167,7 +167,7 @@ body{
 	position: relative;
 	&__picture{
 		padding-top: 15%;
-		border: 2px solid black;
+		border: 2px solid white;
 		background-repeat: no-repeat;
 		background-position: lef;
 		position: absolute;
@@ -176,6 +176,7 @@ body{
 		width: 17%;
 		padding-left: 0;
 		background-size: cover;
+	    box-shadow: 0px 0px 10px #888888;
 	}
 	&__name{
 		position: absolute;
@@ -373,31 +374,143 @@ body{
 #panel4{
 	a{border: 1px solid;
     border-radius: 50%;
-    padding-bottom: 31px;
-    padding-top: 50px;
+    padding-bottom: 33px;
+    padding-top: 53px;
     padding-left: 15px;
-    // background-color: black;
     padding-right: 15px;
-    &:hover{
-    	background-color:black;
-    	.fa{
-		color:white;
+    position: absolute;
 	}
-    }
-	}
-	
-	// .out-link{
-	//     padding-bottom: 10px;
-	//     padding-top: 37px;
 
-	// }
-	.fa-instagram{
-		margin: 14px;
+	.out-fb{
+		left:10%;
+		padding-left: 20px;
+	    padding-right: 20px;
+	    transition: all .5s ease-in-out;
+	    .fa{
+	    	margin:-12px 28px 7px 28px;
+	    }
+	    &:hover{
+    		border:1px solid $blue;
+		    transform: translateY(-20%);
+    		background-color:$blue;
+    		.fa{
+				color:white;
+			}
+	    }
+	}
+	.out-insta{
+		left:21.5%;
+		padding-left: 18px;
+	    transition: all .5s ease-in-out;
+	    padding-right: 18px;
+	    .fa{
+	    	margin: -12px 28px 12px 28px;
+	    }
+	    &:hover{
+    		border:1px solid #8a3ab9;
+		    transform: translateY(-20%);
+    		background-color:#8a3ab9;
+    		    border: 1px solid #8a3ab9;
+    		.fa{
+				color:white;
+			}
+	    }
+	}
+	.out-tw{
+	    left:33.75%;
+		padding-left: 18px;
+	    padding-right: 18px;
+	    transition: all .5s ease-in-out;
+		.fa{
+			margin:-12px 26px 12px 26px;
+		}
+	    &:hover{
+    		background-color:#1da1f2;
+    		border:1px solid #1da1f2;
+		    transform: translateY(-20%);
+    		.fa{
+				color:white;
+			}
+	    }
+	}
+	.out-link{
+		left:46%;
+		padding-left: 18px;
+	    transition: all .5s ease-in-out;
+	    padding-right: 18px;
+		.fa{
+			margin:-12px 26px 12px 26px;
+		}
+	    &:hover{
+    		border:1px solid #0084bf;
+		    transform: translateY(-20%);
+    		background-color:#0084bf;
+    		.fa{
+				color:white;
+			}
+	    }
+	}
+	.out-git{
+		left:58.25%;
+		padding-left: 15px;
+	    padding-right: 15px;
+	    transition: all .5s ease-in-out;
+		.fa{
+			margin:-12px 29px 12px 29px;
+		}
+	    &:hover{
+    		border:1px solid black;
+		    transform: translateY(-20%);
+    		background-color:black;
+    		.fa{
+				color:white;
+			}
+	    }
+	}
+	.out-pen{
+		left:70.5%;
+		padding-left: 13px;
+	    padding-right: 13px;
+	    transition: all .5s ease-in-out;
+		.fa{
+			margin:-12px 26px 12px 26px;
+		}
+	    &:hover{
+    		border:1px solid black;
+		    transform: translateY(-20%);
+    		background-color:black;
+    		.fa{
+				color:white;
+			}
+	    }
+	}
+	.out-med{
+		left:82.55%;
+		padding-left: 15px;
+	    padding-right: 15px;
+	    transition: all .5s ease-in-out;
+		.fa{
+			margin:-12px 26px 12px 26px;
+		}
+	    &:hover{
+    		border:1px solid #347235;
+		    transform: translateY(-20%);
+    		background-color:#347235;
+    		.fa{
+				color:white;
+			}
+	    }
 	}
 	.fa-twitter{
 		margin: 14px;
 	}
 	.fa-linkedin{
 		margin:15px;
+	}
+	.logos__cont{
+		position: relative;
+	    height: 50vh;
+        margin-top: 30px;
+
 	}
 }
