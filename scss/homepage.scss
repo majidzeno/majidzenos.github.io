@@ -1,5 +1,14 @@
 body{
 	background-color:$gray;
+	@include breakpoint(1024px) {font-size: 14px };
+	@include breakpoint(1280px) {font-size: 16px };
+	@include breakpoint(1360px) {font-size: 17px };
+	@include breakpoint(1366px) {font-size: 17px };
+	@include breakpoint(1440px) {font-size: 18px };
+	@include breakpoint(1600px) {font-size: 20px };
+	@include breakpoint(1680px) {font-size: 21px };
+	@include breakpoint(1920px) {font-size: 24px };
+	@include breakpoint(2560px) {font-size: 33px };
 }
 .underconstruction{
 	text-align: center;
@@ -7,40 +16,46 @@ body{
 }
 .navbar{
 	background-color:$blue;
-    padding: 0px 10px;
-    height: 42px;
+    padding: 0px 0.625em;
+    /*height: 42px;*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 	@include clearfix;
 	&__left{
-	    float: left;
+	    /*float: left;*/
 	    background-color: $blue;
 	    width: 45%;
-	    padding: 0 35px;
+	    padding: 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 		@include clearfix;
 	}
 	&__logo{
-		// font-size: 28px;
-
-		float: left;
-	    margin-top: 4px;
-/*		// .fa{
-		// 	color:white;
-		// }*/
+		font-size: 1.75em;
+	    margin: 0;
+	    align-self: center;
+	    display: flex;
 		a{
+			display: inline-flex;
 			img{
-				width: 35px;
+				width: 1.15em;
+				align-self: center;
 			}
 		}
 	}
 	&__search{
-	    float: right;
+	    /*float: right;*/
 	    width: 92%;
-	    margin-top: 9px;
+	    /*margin-top: 9px;*/
 	    margin-bottom: 0;
-	    border-radius: 4px;
+	    /*border-radius: 0.0625em;*/
 		input{
+			font-size:1em;
 		    margin: 0;
-		    height: 25px;
-		    border-radius: 4px;
+		    height: 1.56em;
+		    border-radius: 0.15em;
 		    background-color:white;
 		}
 		@mixin placeholder {
@@ -55,26 +70,38 @@ body{
 
 	}
 	&__right{
-		float: right;
+		/*float: right;*/
 		width:45%;
+	    padding: .3em 0;
 		@include clearfix;
+	    display: flex;
+	    align-items: center;
+	    justify-content: space-around;
+	    padding-left:10em;
+	}
+	&__image{
+		a img{
+			border-radius: 50%;
+			width: 2em;
+		}
 	}
 	&__list{
 		@include clearfix;
 		list-style:none;
 		margin:0;
-		padding-top: 10px;
-		float: left;
+		display:flex;
+		/*padding-top: 10px;*/
+		/*float: left;*/
 		li{
-			float: left;
+			/*float: left;*/
 			color:white;
 			padding-left:10px;
-			font-size: 12px;
+			font-size: 0.75em;
 			font-weight:bold;
 		}
 		.navName{
-			border-right:1px solid rgba(10, 10, 10, 0.18);
-			padding-right:10px;
+			border-right:0.0625em solid $gray;
+			padding-right:.83em;
 		}
 	}
 	&__icons{
@@ -82,39 +109,41 @@ body{
 		background-color:$blue;
 		margin: 0;
 		padding: 0;
-		margin-top: 2px;
-		float: left;
-		padding-left: 10px;
+		display: flex;
+		align-items: center;
+		/*margin-top: 2px;*/
+/*		float: left;*/
+		/*padding-left: 10px;*/
 		@include clearfix;
-		margin-top: 7px;
-		margin-left: 24px;
+		/*margin-top: 7px;*/
+		/*margin-left: 24px;*/
 	}
 	.icon{
-		float: left;
-		max-height: 33px;
+/*		float: left;*/
+		/*max-height: 33px;*/
 		&__1{
 			img{
-			    width: 35px;
+			    width: 2.18em;
 			}
 		}
 		&__2{
 			img{
-				width: 30px;
-			    margin-top: -3px;
-			    margin-right: 8px;
+				width: 1.875em;
+			    /*margin-top: -3px;*/
+			    margin-right: .5em;
 			}
 		}
 		&__3{
-		    width: 48px;
-		    HEIGHT: 23PX;
-		    margin-top: -2px;
-		    margin-right: 25px;
-		    border-right: 1PX SOLID rgba(24, 36, 61, 0.4);
-		    PADDING-RIGHT: 22PX;	
+		    width: 3em;
+		    /*HEIGHT: 23PX;*/
+		    /*margin-top: -2px;*/
+		    margin-right: 1.5625em;
+		    border-right: 0.0625em SOLID rgba(24, 36, 61, 0.4);
+		    PADDING-RIGHT: 1.375em;	
 		}
 		&__4{
-		    width: 37px;
-		    margin-top: -2px;
+		    width: 2.3125em;
+		    /*margin-top: -2px;*/
 		}
 	}
 	&__mobile{
@@ -127,7 +156,7 @@ body{
 		overflow: hidden;
 		background-color:$blue;
 		a{
-			float: left;
+			/*float: left;*/
 			max-width: 16%;
 		}
 	}
@@ -143,7 +172,7 @@ body{
 		margin-top: -6px;
 	}
 	#menu-mobile{
-		float: right;
+		/*float: right;*/
 		li{
 			margin-top: -7px;
 			padding: 7px;
@@ -154,25 +183,32 @@ body{
 		height: 55px;
 	}
 }
+/*End of Header Styling */
+.row{
+	max-width: 75em;
+}
 .coverCont{
-    border: 1px solid $gray;
+    border: 0.0625em solid $gray;
     background-color: white;
     border-top: none;
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
     text-align:center;
+    &>img{
+    	    height: 16em;
+    }
 }
 .profile{
 	position: relative;
 	&__picture{
 		padding-top: 15%;
-		border: 2px solid white;
+		border: 0.125em solid white;
 		background-repeat: no-repeat;
 		background-position: lef;
 		position: absolute;
 		left: 2%;
-		top: -160px;
+		top: -10em;
 		width: 17%;
 		padding-left: 0;
 		background-size: cover;
@@ -182,23 +218,23 @@ body{
 		position: absolute;
 		left: 20%;
 		top: 80%;
-		font-size: 25px;
-		margin-top: -46px;
+		font-size: 1.5625em;
+		margin-top: -1.84em;
 	}
 }
 .T{
 	a{
-		letter-spacing: 3px;
+		letter-spacing: 0.1875em;
 	}
 }
 .taskBar{
 	list-style: none;
 	@include clearfix;
+	display: flex;
 	a{
-		float: left;
-		border: 1px solid #e9eaed;
-	    padding: 15px 30px;
-		font-size: 16px;
+		border: 0.0625em solid #e9eaed;
+	    padding: 0.9375em 1.875em;
+		font-size: 1em;
 		font-weight: bold;
 		color: #365899!important;
 		[aria-selected='true']{
@@ -224,20 +260,38 @@ body{
 .tabs-panel{
 	padding:0;
 }
-// Arrow Up just make the parent position relative
-// .tabs-title{
-// 	&:after{
-// 		content: '';
-// 		position: absolute;
-// 		width: 0;
-// 		top: 50%;
-// 		left: 100%;
-// 		height: 0;
-// 		border-top: 20px solid transparent;
-// 		border-bottom: 20px solid transparent;
-// 		border-left: 20px solid #ebebeb;
-// 	}
-// }
+/*// Arrow Up just make the parent position relative*/
+ li.taskBar__tab{
+	&:nth-child(1) {
+		flex:2;
+	};
+	&:nth-child(2) {
+		flex:1;
+	};
+	&:nth-child(3) {
+		flex:4;
+	};
+	&:nth-child(4) {
+		flex:1;
+	};
+	&:nth-child(5) {
+		flex:1;
+	};
+	&:nth-child(6) {
+		flex:3;
+	};
+ 	&:after{
+ 		content: '';
+ 		position: absolute;
+ 		width: 0;
+ 		top: 50%;
+ 		left: 100%;
+ 		height: 0;
+ 		border-top: 20px solid transparent;
+ 		border-bottom: 20px solid transparent;
+ 		border-left: 20px solid #ebebeb;
+ 	}
+ }
 .tab_content{
 	border: 10px solid $gray;
     background-color: white;
@@ -263,18 +317,18 @@ body{
 }
 #first_link{
 	color:white!important;
-	padding:15px 105px;
+	padding:0.9375em 6.5625em;
 }
 #last_link{
 	color:white!important;
-	padding:15px 127.7px;
+	padding:.9375em 6.98125em;
 }
 .intro{
 	list-style: none;
 	margin-left:0;
 	.fa{
 		color:$icon_gray;
-		margin-right:10px;
+		margin-right:.5em;
 	}
 	a{
 		color:$blue;
