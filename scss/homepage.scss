@@ -17,7 +17,6 @@ body{
 .navbar{
 	background-color:$blue;
     padding: 0px 0.625em;
-    /*height: 42px;*/
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -57,6 +56,7 @@ body{
 		    height: 1.56em;
 		    border-radius: 0.15em;
 		    background-color:white;
+		    /*background-color:red;*/
 		}
 		@mixin placeholder {
 			::-webkit-input-placeholder {@content}
@@ -70,7 +70,6 @@ body{
 
 	}
 	&__right{
-		/*float: right;*/
 		width:45%;
 	    padding: .3em 0;
 		@include clearfix;
@@ -121,6 +120,7 @@ body{
 	.icon{
 /*		float: left;*/
 		/*max-height: 33px;*/
+
 		&__1{
 			img{
 			    width: 2.18em;
@@ -147,9 +147,12 @@ body{
 		}
 	}
 	&__mobile{
-		list-style:none;
-		background-color:red;
 		@include clearfix;
+		list-style:none;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		background-color:red;
 		width:100%;
 		height: 100%;
 		margin:0;
@@ -158,34 +161,40 @@ body{
 		a{
 			/*float: left;*/
 			max-width: 16%;
+			img{
+			    padding: .3em;
+			}
 		}
 	}
 	#msg-mobile{
-		margin-top: -3px;
+		/*margin-top: -3px;*/
 	}
 	#notifications-mobile{
-		margin-top: -3px;
-		padding: 2px;
+		/*margin-top: -3px;*/
+		padding: 0.125em;
 	}
 	#search-mobile{
-		padding: 6px;
-		margin-top: -6px;
+		padding: 0.375em;
 	}
 	#menu-mobile{
 		/*float: right;*/
 		li{
-			margin-top: -7px;
-			padding: 7px;
+			/*margin-top: -7px;*/
+			padding: 0.375em;
 		}
 	}
 	@include breakpoint (medium down){
 		padding:0;
-		height: 55px;
+		height: 40px;
 	}
 }
 /*End of Header Styling */
 .row{
 	max-width: 75em;
+	@include breakpoint (medium down){
+		max-width: 100vw;
+		overflow: hidden;
+	}
 }
 .coverCont{
     border: 0.0625em solid $gray;
@@ -197,6 +206,13 @@ body{
     text-align:center;
     &>img{
     	    height: 16em;
+		@include breakpoint (medium down){
+			height: 12em;
+			padding-top: 9%;
+		    border-bottom: 1px solid $gray;
+		    margin-bottom: 0%;
+		    padding-bottom: 19%;
+		}
     }
 }
 .profile{
@@ -205,7 +221,6 @@ body{
 		padding-top: 15%;
 		border: 0.125em solid white;
 		background-repeat: no-repeat;
-		background-position: lef;
 		position: absolute;
 		left: 2%;
 		top: -10em;
@@ -213,6 +228,15 @@ body{
 		padding-left: 0;
 		background-size: cover;
 	    box-shadow: 0px 0px 10px #888888;
+		@include breakpoint (medium down){
+			padding-top: 32%;
+			position: relative;
+			left: 0%;
+			top: 0;
+			width: 33.3%;
+			margin:0 auto;
+			margin-top: -20%;
+		}
 	}
 	&__name{
 		position: absolute;
@@ -220,6 +244,10 @@ body{
 		top: 80%;
 		font-size: 1.5625em;
 		margin-top: -1.84em;
+		@include breakpoint (medium down){
+			position: static;
+			margin-top: 1%;
+		}
 	}
 }
 .T{
@@ -249,36 +277,74 @@ body{
 			background-color:white!important;
 			color:#0c3d5d !important;
 		}
+		@include breakpoint (medium down){
+			padding: 1em;
+			
+	    }
+	}
+	@include breakpoint (medium down){
+		flex-direction: row;
+		/*max-width: 100vw;*/
 	}
 }
 .taskBar.tabs{
+	/*background-color:aqua;*/
 	border:none;
+	@include breakpoint (medium down){
+	    width: 100vw;
+	    display: inline-flex;
+	}
 }
 .tabs-content{
 	border:none;
+	@include breakpoint(1024px) {font-size: 14px };
+	@include breakpoint(1280px) {font-size: 16px };
+	@include breakpoint(1360px) {font-size: 17px };
+	@include breakpoint(1366px) {font-size: 17px };
+	@include breakpoint(1440px) {font-size: 18px };
+	@include breakpoint(1600px) {font-size: 20px };
+	@include breakpoint(1680px) {font-size: 21px };
+	@include breakpoint(1920px) {font-size: 24px };
+	@include breakpoint(2560px) {font-size: 33px };
+	@include breakpoint (medium down){
+		h5,ul{
+			padding-left: 9%;
+			padding-right: 7%;
+		}
+	}
 }
 .tabs-panel{
 	padding:0;
+	min-height: 50vh;
 }
 /*// Arrow Up just make the parent position relative*/
  li.taskBar__tab{
 	&:nth-child(1) {
 		flex:2;
+		@include breakpoint (medium down){
+			flex:1;
+		}
 	};
 	&:nth-child(2) {
 		flex:1;
 	};
 	&:nth-child(3) {
-		flex:4;
+		flex:1;
 	};
 	&:nth-child(4) {
-		flex:1;
+		flex:4;
+		@include breakpoint (medium down){
+			flex:1;
+		}
 	};
 	&:nth-child(5) {
 		flex:1;
 	};
 	&:nth-child(6) {
 		flex:3;
+		@include breakpoint (medium down){
+			flex:1;
+		}
 	};
  	&:after{
  		content: '';
@@ -296,21 +362,28 @@ body{
 	border: 10px solid $gray;
     background-color: white;
     text-align: left;
-    font-size: 13px;
 	border-left: none;
 	.fa-globe{
-		border: 6px solid $blue;
-		border-radius: 50%;
-		color: white;
-		background-color: $blue;
-		width: 30px;
-		height: 31px;
-		margin-right: 10px;
+		border: 0.3em solid $blue;
+	    border-radius: 50%;
+	    color: white;
+	    background-color: $blue;
+	    width: 1.5em;
+	    height: 1.5em;
+	    margin-right: 0.625em;
 	}
     h5{
-	    padding-top: 15px;
+    	font-size: 1.25rem;
+	    padding-top: 1em;
 	}
 }
+/*.tabs-title{
+	&:not(.is-active) {
+		@include breakpoint (medium down){
+			display: none;
+		}
+	}
+}*/
 #first_empty{
 }
 #last_empty{
@@ -321,11 +394,12 @@ body{
 }
 #last_link{
 	color:white!important;
-	padding:.9375em 6.98125em;
+	/*padding:.9375em 6.98125em;*/
 }
 .intro{
 	list-style: none;
 	margin-left:0;
+	font-size:.8em;
 	.fa{
 		color:$icon_gray;
 		margin-right:.5em;
@@ -338,7 +412,7 @@ body{
 	&_right{
 		border-right:none;
 		border-bottom:none;
-		border-left:10px solid $gray;
+		border-left:0.625em solid $gray;
 
 	}
 	&_left{
@@ -348,63 +422,89 @@ body{
 	}
 }
 .position{
-	padding-top:25px;
+	padding-top:1.5625em;
+	@include breakpoint (medium down){
+		text-align: center;
+	}
 	&:last-child{
-		padding-bottom:35px;
+		padding-bottom:2.1875em;
 	}
 	&__logo{
 		padding-top: 5%;
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: contain;
-		border: 15px solid white;
+		border: 0.9375em solid white;
+		@include breakpoint (medium down){
+			padding-top: 14%;		
+		}
 	}
 	&__title{
-	    font-size: 16px;
+	    font-size: 1em;
 	    font-weight: bold;
 	    color: #0c3d5d;
 	}
 	&__company{
-		font-size: 14px;
+		font-size: 1em;
 		display: inline-block;
 	}
 }
 .almakinah{
 	padding-top:18%;
+	@include breakpoint (medium down){
+		padding-top:50%;
+	}
 }
 .riseUp{
 	padding-top:18%;
+	@include breakpoint (medium down){
+		padding-top:50%;
+	}
 }
 .education{
 	overflow: hidden;
+
+
 	.almakinah{
 		padding-top:15%;
+		@include breakpoint (medium down){
+			padding-top:50%;
+		}
 	}
 	.position{
 		&__container{
 			text-align: left;
-			padding-right: 50px;
+			padding-right: 3.125em;
+			@include breakpoint (medium down){
+				text-align: center;
+				padding-right: 0em;
+				padding:2em;
+			}
 		}
 		&__title{
-			font-size: 18px;
+			font-size: 1.125em;
 		}
 		&__company{
-			font-size: 16px;
+			font-size: 1rem;
 		}
 		&__period{
-			font-size:14px;
+			font-size:0.875em;
 		}
 		&__location{
-			font-size:14px;
+			font-size:0.875em;
 		}
 		&__description{
-			font-size:14px;
+			font-size:0.875em;
 		}
 	}
 }
+.position__description{
+	font-size:0.875em;
+	color: black;
+}
 .social.fa{
-	font-size:50px;
-	margin:50px 18px 50px 18px;  
+	font-size:3.125em;
+	margin:1em 0.36em 1em 0.36em;  
 }
 .letter.fa{
 	margin:0;
@@ -412,45 +512,54 @@ body{
 #panel2{
 	h2{
 		font-weight: bold;
-		letter-spacing: 10px;
-		margin: 50px;
+		letter-spacing: .185em;
+		margin: 1em;
 		color: #1779ba;
+		color:$blue;
 		font-family: sans-serif;
-		font-size: 54px;
-
+		font-size: 3.375em;
+		@include breakpoint (medium down){
+			font-size: 1.7em;
+		}
 	}
 
 }
 .pen{
-	// max-width:50%;
-	// margin: 0 25px 50px 25px;
+/*	max-width:50%;
+	margin: 0 25px 50px 25px;*/
 	margin: 0;
-    padding: 30px;
+    padding: 1.875em;
 }
 	#embed-nav {
-		background-color:red ;
+		background-color:red;
 	}
 
 #panel4{
-	a{border: 1px solid;
-    border-radius: 50%;
-    padding-bottom: 33px;
-    padding-top: 53px;
-    padding-left: 15px;
-    padding-right: 15px;
-    position: absolute;
+	a{
+		border: 0.11em solid;
+	    border-radius: 50%;
+	    padding-bottom: 2.0625em;
+	    padding-top: 3.3125em;
+	    padding-left: 1em;
+	    padding-right: 1em;
+		@include breakpoint (medium down){
+			border:none;
+			border-radius: 0;
+			padding: 0;
+			position: static;
+	    }
 	}
 
 	.out-fb{
 		left:10%;
-		padding-left: 20px;
-	    padding-right: 20px;
+		padding-left: 1.25em;
+	    padding-right: 1.25em;
 	    transition: all .5s ease-in-out;
 	    .fa{
-	    	margin:-12px 28px 7px 28px;
+	    	margin:-0.24em 0.56em 0.14em 0.56em;
 	    }
 	    &:hover{
-    		border:1px solid $blue;
+    		border:0.02em solid $blue;
 		    transform: translateY(-10%);
     		background-color:$blue;
     		.fa{
@@ -460,17 +569,18 @@ body{
 	}
 	.out-insta{
 		left:21.5%;
-		padding-left: 18px;
+		padding-left: 0.36em;
 	    transition: all .5s ease-in-out;
-	    padding-right: 18px;
+	    padding-right: 0.36em;
 	    .fa{
-	    	margin: -12px 28px 12px 28px;
+	    	margin:-0.24em 0.77em 0.24em 0.77em;
+
 	    }
 	    &:hover{
-    		border:1px solid #8a3ab9;
+    		border:0.02em solid #8a3ab9;
 		    transform: translateY(-10%);
     		background-color:#8a3ab9;
-    		    border: 1px solid #8a3ab9;
+    		    border: 0.02em solid #8a3ab9;
     		.fa{
 				color:white;
 			}
@@ -478,15 +588,15 @@ body{
 	}
 	.out-tw{
 	    left:33.75%;
-		padding-left: 18px;
-	    padding-right: 18px;
+		padding-left: 0.36em;
+	    padding-right: 0.36em;
 	    transition: all .5s ease-in-out;
 		.fa{
-			margin:-12px 26px 12px 26px;
+			margin:-0.24em .77em 0.24em .77em;
 		}
 	    &:hover{
     		background-color:#1da1f2;
-    		border:1px solid #1da1f2;
+    		border:0.02em solid #1da1f2;
 		    transform: translateY(-10%);
     		.fa{
 				color:white;
@@ -495,14 +605,14 @@ body{
 	}
 	.out-link{
 		left:46%;
-		padding-left: 18px;
+		padding-left: 0.36em;
 	    transition: all .5s ease-in-out;
-	    padding-right: 18px;
+	    padding-right: 0.36em;
 		.fa{
-			margin:-12px 26px 12px 26px;
+			margin:-0.34em .87em 0.44em .87em;
 		}
 	    &:hover{
-    		border:1px solid #0084bf;
+    		border:0.02em solid #0084bf;
 		    transform: translateY(-10%);
     		background-color:#0084bf;
     		.fa{
@@ -512,14 +622,14 @@ body{
 	}
 	.out-git{
 		left:58.25%;
-		padding-left: 15px;
-	    padding-right: 15px;
+		padding-left: 0.3em;
+	    padding-right: 0.3em;
 	    transition: all .5s ease-in-out;
 		.fa{
-			margin:-12px 29px 12px 29px;
+			margin:-0.24em 0.87em 0.34em 0.87em;
 		}
 	    &:hover{
-    		border:1px solid black;
+    		border:0.02em solid black;
 		    transform: translateY(-10%);
     		background-color:black;
     		.fa{
@@ -529,14 +639,14 @@ body{
 	}
 	.out-pen{
 		left:70.5%;
-		padding-left: 13px;
-	    padding-right: 13px;
+		padding-left: 0.26em;
+	    padding-right: 0.26em;
 	    transition: all .5s ease-in-out;
 		.fa{
-			margin:-12px 26px 12px 26px;
+			margin:-0.19em 0.87em 0.34em 0.87em;
 		}
 	    &:hover{
-    		border:1px solid black;
+    		border:0.02em solid black;
 		    transform: translateY(-10%);
     		background-color:black;
     		.fa{
@@ -546,14 +656,14 @@ body{
 	}
 	.out-med{
 		left:82.55%;
-		padding-left: 15px;
-	    padding-right: 15px;
+		padding-left: 0.3em;
+	    padding-right: 0.3em;
 	    transition: all .5s ease-in-out;
 		.fa{
-			margin:-12px 26px 12px 26px;
+			margin:-0.2em 0.87em 0.4em 0.87em;
 		}
 	    &:hover{
-    		border:1px solid #3cb371;
+    		border:0.02em solid #3cb371;
 		    transform: translateY(-10%);
     		background-color:#3cb371;
     		.fa{
@@ -562,15 +672,30 @@ body{
 	    }
 	}
 	.fa-twitter{
-		margin: 14px;
+		margin: 0.28em;
 	}
 	.fa-linkedin{
-		margin:15px;
+		margin:0.3em;
 	}
 	.logos__cont{
 		position: relative;
-	    height: 50vh;
-        margin-top: 100px;
-
+		height: 18.5vh;
+		margin-top: 5.89em;
+		margin-bottom: 5.89em;
+		display: flex;
+	    justify-content: space-around;
+		
+		@include breakpoint (medium down){
+			width: 100vw;
+			position: relative;
+			flex-direction: column;
+			margin:0;
+			height: auto; 
+			padding: 1em;
+		}
 	}
+}
+.tabs__title{
+	margin:.5em 0;
+	color:$blue;
 }

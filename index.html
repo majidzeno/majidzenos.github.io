@@ -10,13 +10,13 @@ Majid Universe</title>
     <link rel="stylesheet" href="css/app.css">
   </head>
   <body>
-<h1 class="underconstruction hide-for-large">
+<!-- <h1 class="underconstruction hide-for-large">
   Mobile Version
 </h1>
 <h1 class="underconstruction hide-for-large">
   UNDER CONSTUCTION
-</h1>
-  <div class="pageCont show-for-large">
+</h1> -->
+  <div class="pageCont">
    <!-- Navbar -->
    <div class="navbar">
      <div class="navbar__left show-for-large">
@@ -31,22 +31,23 @@ Majid Universe</title>
          <a href="#"><li class="navName">Majid</li></a>
          <a href="#"><li>Home</li></a>
        </ul>
-       <ul class="navbar__icons ">
+       <ul class="navbar__icons">
          <a href="#"><li class="icon icon__1" ><img src="images/friendRequest.png" alt=""></li></a>
          <a href="#"><li class="icon icon__2" ><img src="images/messages.png" alt=""></li></a>
          <a href="#"><li class="icon icon__3" ><img src="images/notifications.png" alt=""></li></a>
          <a href="#"><li class="icon icon__4" ><img src="images/qMark.png" alt=""></li></a>
        </ul>
      </div>
+
       <!-- Mobile Screen Navbar-->
-      <!--  <ul class="navbar__mobile hide-for-large">
+       <ul class="navbar__mobile hide-for-large">
         <a href="#"><li class="icon" ><img src="images/home-mobile.png" alt=""></li></a>
         <a href="#"><li class="icon" ><img src="images/friend-mobile.png" alt=""></li></a>
         <a href="#"><li class="icon" id="msg-mobile" ><img src="images/msg-mobile.png" alt=""></li></a>
         <a href="#"><li class="icon" id="notifications-mobile" ><img src="images/notifications-mobile.png" alt="notifications"></li></a>
         <a href="#"><li class="icon" id="search-mobile"><img src="images/search-mobile.png" alt=""></li></a>
         <a href="#" id="menu-mobile"><li class="icon"><img src="images/menu-mobile.png" alt=""></li></a>
-       </ul> -->
+       </ul>
 
    </div> <!-- End of Navbar -->
    <!-- Cover Section -->
@@ -57,17 +58,36 @@ Majid Universe</title>
           <div class="profile__picture" style="background-image:url('images/profilePic.jpg');"></div>
           <div class="profile__name">Majid Eltayeb</div>
         </div>
-        <ul class="taskBar tabs" data-tabs id="example-tabs">
+
+
+        <ul class="taskBar tabs show-for-large" data-tabs id="example-tabs">
           <li class="taskBar__tab tabs-title"><a id="first_link" href="#panel1">empty</a></li>
           <li class="taskBar__tab tabs-title is-active"><a href="#panel1" aria-selected="true">Timeline</a></li>
+          <li class="taskBar__tab tabs-title"><a href="#panel6">Projects</a></li>
           <li class="taskBar__tab tabs-title T"><a href="#panel2">C<i class="letterT fa fa-codepen" aria-hidden="true"></i>DEPEN</a></li>
           <li class="taskBar__tab tabs-title"><a href="#panel3">Education</a></li>
           <li class="taskBar__tab tabs-title"><a href="#panel5">Resume</a></li>
           <li class="taskBar__tab tabs-title"><a href="#panel4">About</a></li>
           <li class="taskBar__tab tabs-title"><a id="last_link" href="#panel4">empty</a></li>
         </ul>
+
+
+
+        <ul class="taskBar tabs hide-for-large" data-tabs id="example-tabs">
+          <li class="taskBar__tab tabs-title is-active"><a href="#panel1" aria-selected="true"><i class="fa fa-clock-o" aria-hidden="true"></i></a>
+          </li>
+          <li class="taskBar__tab tabs-title"><a href="#panel6"><i class="fa fa-building" aria-hidden="true"></i></a>
+          </li>
+          <li class="taskBar__tab tabs-title T"><a href="#panel2"><i class="letterT fa fa-codepen" aria-hidden="true"></i></a>
+          </li>
+          <li class="taskBar__tab tabs-title"><a href="#panel3"><i class="fa fa-graduation-cap" aria-hidden="true"></i></a></li>
+          <li class="taskBar__tab tabs-title"><a href="#panel5"><i class="fa fa-id-card-o" aria-hidden="true"></i></a></li>
+          <li class="taskBar__tab tabs-title"><a href="#panel4"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a></li>
+        </ul>
+ 
         <div class="tabs-content" data-tabs-content="example-tabs">
           <div class="tabs-panel" id="panel1">
+            <h2 class="hide-for-large tabs__title">Timeline</h2>
             <div class="tab_content content_left large-3 columns" >
             <h5><i class="fa fa-globe" aria-hidden="true"></i>Intro</h5>
               <ul class="intro">
@@ -191,7 +211,8 @@ Majid Universe</title>
 
           </div>
           <div class="tabs-panel row" id="panel2">
-            <h2>C<i class="letter fa fa-codepen" aria-hidden="true"></i>DEPEN</h2>
+            <h2 class="hide-for-large tabs__title">C<i class="letterT fa fa-codepen" aria-hidden="true"></i>DEPEN</a></h2>
+            <h2 class="show-for-large">C<i class="letter fa fa-codepen" aria-hidden="true"></i>DEPEN</h2>
             <div class="pen large-6 columns">
               <p data-height="265" data-theme-id="dark" data-slug-hash="VPJvya" data-default-tab="r<p data-height="265" data-theme-id="dark" data-slug-hash="VPJvya" data-default-tab="result" data-user="majidzeno" data-embed-version="2" data-pen-title="FAQ List -- Accordion Responsive  " class="codepen">See the Pen <a href="https://codepen.io/majidzeno/pen/VPJvya/">FAQ List -- Accordion Responsive  </a> by Majid  (<a href="https://codepen.io/majidzeno">@majidzeno</a>) on <a href="https://codepen.io">CodePen</a>.</p>
               <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
@@ -226,6 +247,7 @@ Majid Universe</title>
             </div>
           </div>
           <div class="tabs-panel education" id="panel3">
+            <h2 class="hide-for-large tabs__title">Education</h2>
             <div class="position row">
               <div class="position__logo almakinah large-3 columns" style="background-image: url('images/almakinah.png');"></div>
               <div class="position__container large-9 columns">
@@ -268,6 +290,7 @@ Majid Universe</title>
             </div> 
           </div>
           <div class="tabs-panel" id="panel4">
+            <h2 class="hide-for-large tabs__title">About</h2>
             <div class="logos__cont">
             <a href="https://www.facebook.com/majid.zeno" target="_blank" class="out-fb"><i class="social fa fa-facebook" aria-hidden="true"></i></a>
             <a href="https://www.instagram.com/majidzeno/" target="_blank" class="out-insta"><i class="social fa fa-instagram" aria-hidden="true"></i></a>
@@ -279,7 +302,12 @@ Majid Universe</title>
             </div>
           </div>
           <div class="tabs-panel" id="panel5">
+            <h2 class="hide-for-large tabs__title">Resume</h2>
             <iframe src="https://drive.google.com/file/d/0B3IGrfX4bfJpVmlUT241OGV2Wlk/preview" width="100%" height="1000"></iframe>     
+          </div>
+          <div class="tabs-panel" id="panel6">
+            <h2 class="hide-for-large tabs__title">Projects</h2>
+            Projects Placeholder
           </div>
         </div>
       </div>
