@@ -4639,12 +4639,18 @@ body {
   background-position: center;
   position: relative;
   text-align: center; }
+  @media screen and (max-width: 63.9375em) {
+    .coverCont.row {
+      width: 100vw;
+      border: none;
+      margin: 0; } }
   .coverCont > img {
     height: 16em; }
     @media screen and (max-width: 63.9375em) {
       .coverCont > img {
         height: 12em;
         padding-top: 9%;
+        border: 0;
         border-bottom: 1px solid #e9ebee;
         margin-bottom: 0%;
         padding-bottom: 19%; } }
@@ -4971,7 +4977,9 @@ li.taskBar__tab:after {
       border: none;
       border-radius: 0;
       padding: 0;
-      position: static; } }
+      position: static;
+      border-bottom: 1px solid;
+      color: #3b5998; } }
 
 #panel4 .out-fb {
   left: 10%;
@@ -4980,6 +4988,10 @@ li.taskBar__tab:after {
   transition: all .5s ease-in-out; }
   #panel4 .out-fb .fa {
     margin: -0.24em 0.56em 0.14em 0.56em; }
+    @media screen and (max-width: 63.9375em) {
+      #panel4 .out-fb .fa {
+        margin: 0;
+        font-size: 2em; } }
   #panel4 .out-fb:hover {
     border: 0.02em solid #3b5998;
     -ms-transform: translateY(-10%);
@@ -4995,6 +5007,10 @@ li.taskBar__tab:after {
   padding-right: 0.36em; }
   #panel4 .out-insta .fa {
     margin: -0.24em 0.77em 0.24em 0.77em; }
+    @media screen and (max-width: 63.9375em) {
+      #panel4 .out-insta .fa {
+        margin: 0;
+        font-size: 2em; } }
   #panel4 .out-insta:hover {
     border: 0.02em solid #8a3ab9;
     -ms-transform: translateY(-10%);
@@ -5011,6 +5027,10 @@ li.taskBar__tab:after {
   transition: all .5s ease-in-out; }
   #panel4 .out-tw .fa {
     margin: -0.24em .77em 0.24em .77em; }
+    @media screen and (max-width: 63.9375em) {
+      #panel4 .out-tw .fa {
+        margin: 0;
+        font-size: 2em; } }
   #panel4 .out-tw:hover {
     background-color: #1da1f2;
     border: 0.02em solid #1da1f2;
@@ -5026,6 +5046,10 @@ li.taskBar__tab:after {
   padding-right: 0.36em; }
   #panel4 .out-link .fa {
     margin: -0.34em .87em 0.44em .87em; }
+    @media screen and (max-width: 63.9375em) {
+      #panel4 .out-link .fa {
+        margin: 0;
+        font-size: 2em; } }
   #panel4 .out-link:hover {
     border: 0.02em solid #0084bf;
     -ms-transform: translateY(-10%);
@@ -5041,6 +5065,10 @@ li.taskBar__tab:after {
   transition: all .5s ease-in-out; }
   #panel4 .out-git .fa {
     margin: -0.24em 0.87em 0.34em 0.87em; }
+    @media screen and (max-width: 63.9375em) {
+      #panel4 .out-git .fa {
+        margin: 0;
+        font-size: 2em; } }
   #panel4 .out-git:hover {
     border: 0.02em solid black;
     -ms-transform: translateY(-10%);
@@ -5056,6 +5084,10 @@ li.taskBar__tab:after {
   transition: all .5s ease-in-out; }
   #panel4 .out-pen .fa {
     margin: -0.19em 0.87em 0.34em 0.87em; }
+    @media screen and (max-width: 63.9375em) {
+      #panel4 .out-pen .fa {
+        margin: 0;
+        font-size: 2em; } }
   #panel4 .out-pen:hover {
     border: 0.02em solid black;
     -ms-transform: translateY(-10%);
@@ -5071,6 +5103,10 @@ li.taskBar__tab:after {
   transition: all .5s ease-in-out; }
   #panel4 .out-med .fa {
     margin: -0.2em 0.87em 0.4em 0.87em; }
+    @media screen and (max-width: 63.9375em) {
+      #panel4 .out-med .fa {
+        margin: 0;
+        font-size: 2em; } }
   #panel4 .out-med:hover {
     border: 0.02em solid #3cb371;
     -ms-transform: translateY(-10%);
@@ -5098,11 +5134,13 @@ li.taskBar__tab:after {
     #panel4 .logos__cont {
       width: 100vw;
       position: relative;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
       margin: 0;
       height: auto;
-      padding: 1em; } }
+      padding: 1em; }
+      #panel4 .logos__cont a {
+        padding: 0; } }
 
 .tabs__title {
   margin: .5em 0;
