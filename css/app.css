@@ -5145,3 +5145,27 @@ li.taskBar__tab:after {
 .tabs__title {
   margin: .5em 0;
   color: #3b5998; }
+
+.projects {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-align: center;
+      align-items: center; }
+  .projects a {
+    border: 0.5em solid #3b5998;
+    padding-top: 23%;
+    background-size: cover;
+    width: 50%;
+    font-weight: 800;
+    font-size: 1.5rem;
+    background-color: white; }
+    .projects a p {
+      background-color: white;
+      color: white;
+      background-color: #3b5998; }
+    .projects a img {
+      border: .5em solid black; }

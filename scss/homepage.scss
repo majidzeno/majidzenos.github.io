@@ -743,3 +743,26 @@ body{
 	margin:.5em 0;
 	color:$blue;
 }
+.projects{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	a{
+		border: .5em solid $blue;
+		padding-top: 23%;
+		background-size: cover;
+		width: 50%;
+		font-weight: 800;
+		font-size: 1.5rem;
+		background-color: white;
+		p{
+			background-color: white;
+			color:white;
+			background-color: $blue;
+		}
+		img{
+			border:.5em solid black;
+		}
+	}
+}
